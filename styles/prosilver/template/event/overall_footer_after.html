@@ -1,0 +1,14 @@
+<!-- IF .soc_row -->
+<script type="text/javascript">
+$(document).ready(function() {
+	<!-- IF S_REGISTERED_USER -->
+		<!-- BEGIN soc_row -->
+		$("a.{soc_row.S_PROVIDER}").prependTo("#{soc_row.S_PROVIDER}");
+		<!-- END soc_row -->
+	<!-- ELSE -->
+		$(".socbuttons").appendTo("#social_links");
+		$("#social_links i").css("font-size", "35px");
+	<!-- ENDIF -->
+});
+</script>
+<!-- ENDIF -->

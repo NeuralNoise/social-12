@@ -1,0 +1,52 @@
+<!-- INCLUDE ucp_header.html -->
+<h2>{L_TITLE}</h2>
+
+<div class="panel">
+	<p>{L_TITLE_EXPLAIN}</p>
+
+	<!-- IF .soc_row -->
+		<div style="float:right">
+			<!-- BEGIN soc_row -->
+			<a class="{soc_row.S_PROVIDER}" href="{soc_row.U_PROVIDER}" title="{soc_row.L_PROVIDER}"><i class="{soc_row.S_F_A_ICON}"></i><span class="hidden">{soc_row.L_PROVIDER}</span></a>
+			<!-- END soc_row -->
+		</div>
+	<!-- ENDIF -->
+
+	<h3>{SOC_UCP_ADDS}</h3>
+
+	<div class="inner">
+	<!-- IF .socrow -->
+		<!-- BEGIN socrow -->
+		<div class="<!-- IF socrow.S_ROW_COUNT is even -->column1<!-- ELSE -->column2<!-- ENDIF -->">
+			<dl class="details socbuttons">
+				<dt id="{socrow.PROVIDER}" title="{L_UPDATE}"><strong>{socrow.L_PROVIDER}{L_COLON}</strong></dt>
+				<dd>
+					<a href="<!-- IF socrow.U_ACCOUNT -->{socrow.U_ACCOUNT}<!-- ELSE -->#<!-- ENDIF -->" class="forumtitle"><!-- IF socrow.NIKNAME -->{socrow.NIKNAME}<!-- ELSE -->{socrow.LAST_NAME} {socrow.FIRST_NAME}<!-- ENDIF --></a> <!-- IF socrow.DELETE --><a href="{socrow.DELETE}" class="button" style="vertical-align:middle">{L_DELETE}</a><!-- ELSE -->[<b>{socrow.L_BASE_USER}</b>]<!-- ENDIF -->
+				</dd>
+				<dt>
+				<!-- IF socrow.AVATAR -->
+					<img src="{socrow.AVATAR}" width="{socrow.AVATAR_WIDTH}" height="{socrow.AVATAR_HEIGHT}" alt="" />
+				<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" width="30" height="30" alt="" /><!-- ENDIF -->
+				</dt>
+				<dd>
+					<!-- IF socrow.NIKNAME -->{socrow.LAST_NAME} {socrow.FIRST_NAME}<!-- ENDIF -->
+					<!-- IF socrow.BIRTHDAY --> {socrow.BIRTHDAY}<!-- ENDIF -->
+					<br />ID: {socrow.SOC_ID}
+				</dd>
+			</dl>
+			<hr />
+		</div>
+		<!-- END socrow -->
+	<!-- ELSE -->
+		<p><strong>{SOC_UCP_NO_ADDS}</strong></p>
+	<!-- ENDIF -->
+	</div>
+	<!-- Social Authorized in phpBB
+	*** Author Anvar (apwa.ru)
+	*** Team Site: http://bb3.mobi
+	*** Start Date: April 2014 -->
+</div>
+
+{L_SOC_AUTH_COPY}
+
+<!-- INCLUDE ucp_footer.html -->

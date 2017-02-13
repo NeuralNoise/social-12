@@ -1,0 +1,34 @@
+a.yandex {
+	color: #DA4835;
+	padding-left: 3px;
+}
+a.vkontakte {
+	color: #336699;
+}
+a.mailru {
+	color: #003399;
+}
+a.okru {
+	color: #ff9933;
+}
+a.facebook {
+	color: #003366;
+}
+a.google {
+	color: #DA4835;
+}
+
+a.yandex , a.vkontakte,
+a.mailru, a.okru,
+a.facebook, a.google {
+	background-color: #ebebeb;
+	border: #C7C3BF 1px solid;
+	border-radius: 3px;
+}
+
+a.yandex:hover , a.vkontakte:hover,
+a.mailru:hover, a.okru:hover,
+a.facebook:hover, a.google:hover {
+	background-color: transparent;
+	border-color: #336699;
+}
